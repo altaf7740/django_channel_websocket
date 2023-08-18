@@ -1,0 +1,85 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django settings
+*.settings
+*.settings.local
+*.settings.dev
+*.settings.prod
+
+# Logs and databases
+*.log
+db.sqlite3
+
+# Media files (uploads)
+media/
+
+# Static files (collectstatic)
+staticfiles/
+
+# Compiled templates
+*.pyc
+*.pyo
+
+# Compiled Python files
+*.pyc
+*.pyo
+
+# Development environment
+.env
+.vscode/
+*.idea/
+*.pydevproject
+*.pyc
+*.pyo
+
+# Editor specific files
+*~
+*.swp
+.vscode/
+.idea/
+
+# Compiled translations
+locale/
+
+# Cache files
+__pycache__/
+
+# Coverage directory used by coverage tools
+htmlcov/
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Docker
+docker-compose.yml
+docker-compose.override.yml
+*.dockerbuild
+*.dockerignore
+
+# Heroku
+*.heroku
+
+# Node.js / NPM
+node_modules/
+npm-debug.log*
+
+# Yarn
+yarn-error.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE files
+*.sublime-workspace
+*.sublime-project
+*.idea/
+*.vscode/
+

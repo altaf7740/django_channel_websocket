@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <input type="text" id="message" placeholder="Enter a message">
+    <button id="send">Send</button>
+    <div id="chat"></div>
+    
+    <script>
+        const chatSocket = new WebSocket('ws://localhost:8000/ws/some_path/');
+
+        chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            document.querySelector('#chat').innerHTML += '<p>' + data.message + '</p>';
+        };
+
+        document.querySelector('#send').onclick = function(e) {
+            const messageInput = document.querySelector('#message');
+            const message = messageInput.value;
+            chatSocket.send(JSON.stringify({
+                'message': message
+            }));
+            messageInput.value = '';
+        };
+    </script>
+</body>
+</html>
